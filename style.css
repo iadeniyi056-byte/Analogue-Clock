@@ -1,0 +1,93 @@
+body {
+  background:#DEE0F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.clock {
+  width: 320px;
+  height: 320px;
+  background: #1e2937;
+  border: 3px solid snow;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.digital{
+  position: absolute;
+  color: #22DED5;
+  top: 60%;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  border-radius: 50px;
+  transition: all 0.05s cubic-bezier(0.4, 2.08, 0.55, 0.06);
+}
+
+.hour-hand {
+  width: 8px;
+  height: 80px;
+  background: #f8fafc;
+  z-index: 3;
+}
+
+.minute-hand {
+  width: 6px;
+  height: 110px;
+  background: #60a5fa;
+  z-index: 4;
+}
+
+.second-hand {
+  width: 3px;
+  height: 120px;
+  background: #ef4444;
+  z-index: 5;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: #ef4444;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border: 3px solid #e2e8f0;
+}
+
+/* Numbers */
+.number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e2e8f0;
+}
+
+#date{
+  position: absolute;
+  color: #F91C1C;
+  left:60%;
+  top:40%;
+}
+
+/* Keeps the text upright by reversing the rotation */
+.number span {
+  display: inline-block;
+  transform: inherit; /* Copies the degree from the parent .number */
+  transform: rotate(calc(var(--angle, 0deg) * -1)); /* Resets it */
+}
