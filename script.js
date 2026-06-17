@@ -46,7 +46,7 @@ function changebg(){
     setting.classList.toggle("hide")
 }
 
-//apply color
+//apply color function
 
 function applyColor() {
     const bgColor = document.getElementById("bgColor").value
