@@ -7,7 +7,7 @@
   <title>My clock</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
+<body id="body">
   <div class="clock">
     <div class="hand hour-hand">
       
@@ -23,21 +23,43 @@
  <div id="date">1/1/2000</div>
  <div class="number" style="transform: rotate(30deg);">1</div>
 <div class="number" style="transform: rotate(60deg);">2</div>
-<div class="number" style="transform: rotate(90deg);">3</div>
-<div class="number" style="transform: rotate(120deg);">4</div>
-<div class="number" style="transform: rotate(150deg);">5</div>
-<div class="number" style="transform: rotate(180deg);">6</div>
-<div class="number" style="transform: rotate(210deg);">7</div>
-<div class="number" style="transform: rotate(240deg);">8</div>
-<div class="number" style="transform: rotate(270deg);">9</div>
+<div class="number" style="transform: rotate(90deg);"><span style="transform: rotate(-90deg);">3</span></div>
+<div class="number" style="transform: rotate(120deg);"><span style="transform: rotate(-120deg);">4</span></div>
+<div class="number" style="transform: rotate(150deg);"><span style="transform: rotate(-150deg);">5</span></div>
+<div class="number" style="transform: rotate(180deg);"><span style="transform: rotate(-180deg);">6</span></div>
+<div class="number" style="transform: rotate(210deg);"><span style="transform: rotate(-210deg);">7</span></div>
+<div class="number" style="transform: rotate(240deg);"><span style="transform: rotate(-240deg);">8</span></div>
+<div class="number" style="transform: rotate(270deg);"><span style="transform: rotate(-270deg);">9</span></div>
 <div class="number" style="transform: rotate(300deg);">10</div>
 <div class="number" style="transform: rotate(330deg);">11</div>
 <div class="number" style="transform: rotate(360deg);">12</div>
   </div>
 <div class="digital">
-  <h1 id="digital-time">12:30</h1>
-   
+  <h1 id="digital-time">00:00:00</h1>
  </div>
+ <ul id="setting" class="hide">
+   <li id="setting-content">
+     <input type="color" id="bgColor"/>
+     <p>Background color</p>
+     </li>
+    <li  id="setting-content">
+       <input type="color" id="secColor"/>
+      <p>Seconds-hand</p>
+    </li>
+    <li  id="setting-content">
+      <input type="color" id="minColor" />
+      <p>Minute-hand color</p>
+    </li>
+    <li id="setting-content">
+    <input type="color" id="hourColor" />
+    <p>hourhand-hand color</p>
+    </li>
+<div>
+  <button id="applyBtn" onclick="applyColor()">Apply</button>
+</div>
+ </ul>
+</div>
+ <button id="showBtn" onclick="changebg()">custom theme</button>
   
 </body>
 <script src="script.js"></script>
